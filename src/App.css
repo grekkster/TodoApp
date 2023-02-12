@@ -1,38 +1,59 @@
 .App {
-  text-align: center;
+  max-width: 1024px;
+  background: rgb(135, 218, 139);
+  margin: auto;
+  padding: 1rem 1rem;
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.columns {
+  display: grid;
+  grid-template-columns: 10fr 2fr 1fr 3fr;
+  column-gap: 0.2rem;
+  text-align: left;
+  margin: 0.4rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inline>* {
+  display: inline-grid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todoList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.buttonsCol {
+  text-align: left;
+  min-width: 196px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.buttonsCol button {
+  min-width: 50px;
+}
+
+.actionButton {
+  min-width: 50px;
+}
+
+.status {
+  min-width: 92px;
+}
+
+.priorityInput {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 40px;
+}
+
+.errorText {
+  color: brown;
+  font-size: smaller;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    grid-template-columns: auto;
   }
 }
